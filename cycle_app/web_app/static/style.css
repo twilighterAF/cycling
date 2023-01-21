@@ -1,0 +1,193 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper
+{
+  background-color: #252b32;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cycles
+{
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.cycles input
+{
+  width: 51px;
+  font-size: 13px;
+  color: #ffffff;
+  background-color: #252b32;
+  border: none;
+  margin-bottom: 7px;
+}
+
+.cycles input::placeholder
+{
+  color: #bababa;
+  font-size: 10px;
+}
+
+.cycles svg
+{
+  stroke-width: 5.5px;
+  fill: transparent;
+  transform: rotate(-90deg);
+}
+
+.cycles circle
+{
+  stroke-linecap: round;
+  transition: stroke-dasharray 0.1s cubic-bezier(1, 1, 1, 2);
+}
+
+.fifth-cycle div
+{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.fifth-cycle
+{
+  display: flex;
+  justify-content: center;
+}
+
+.bar5
+{
+  stroke: #d226fd;
+}
+
+.fourth-cycle
+{
+  margin-top: 29px;
+}
+
+.bar4
+{
+  stroke: #534aff;
+}
+
+.third-cycle, .second-cycle, .first-cycle, .inner-cycle
+{
+  top: 49px;
+}
+
+.bar3
+{
+  stroke: #c0fd26;
+}
+
+
+.bar2
+{
+  stroke: #ff9318;
+}
+
+.bar1
+{
+  stroke: #f94848;
+}
+
+.buttons
+{
+  display: flex;
+  margin-top: 40%;
+}
+
+.buttons button
+{
+  background-color: transparent;
+  border: none;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.buttons i
+{
+  color: #ffffff;
+  font-size: 29px;
+}
+
+.buttons i:active
+{
+  transform: scale(0.97);
+}
+
+#focused1
+{
+  filter: drop-shadow(0 0 2.5px #ff0000);
+  
+}
+
+#focused2
+{
+  filter: drop-shadow(0 0 2.5px #ff7300);
+}
+
+#focused3
+{
+  filter: drop-shadow(0 0 2.5px #51ff00);
+}
+
+#focused4
+{
+  filter: drop-shadow(0 0 2.5px #006eff);
+}
+
+#focused5
+{
+  filter: drop-shadow(0 0 2.5px #ff00b3);
+}
+
+
+@media only screen and (min-width: 1200px)
+{
+  .wrapper
+  {
+    min-width: 100vw;
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px)
+{
+  .wrapper
+  {
+    min-height: 100vmax;
+  }
+
+
+  .cycles input::placeholder
+  {
+    font-size: 10px;
+  }
+
+  .cycles
+  {
+    transform: scale(0.65);
+  }
+
+  .cycles input
+  {
+    transform: scale(1.4);
+  }
+
+  .buttons
+  {
+    transform: scale(1.4);
+  }
+}
