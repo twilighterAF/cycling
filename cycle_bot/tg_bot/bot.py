@@ -1,12 +1,11 @@
-from os import getenv
-
 from aiogram import Bot, Dispatcher, executor, types
 from loguru import logger
-from dotenv import load_dotenv
+
+from cycle_bot.config import BOT_TOKEN
 
 
-load_dotenv(dotenv_path='./.env')
-bot = Bot(token=str(getenv('BOT_TOKEN')))
+
+bot = Bot(token=BOT_TOKEN)
 dispatcher = Dispatcher(bot)
 
 

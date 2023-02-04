@@ -1,9 +1,15 @@
 import threading
 
-from tg_bot.bot import bot_run
-from time_loop.timeloop import start_loop
+from loguru import logger
+
+from tg_bot import bot_run
+from time_loop import InnerCycle
 
 
 if __name__ == '__main__':
-    threading.Thread(target=start_loop, name='timeloop', daemon=True)
+    logger.add('logs/logfile.log', format='{time} | {level} | {message}', level='DEBUG',
+               rotation='05:00', retention='7 days', compression='zip')
+    logger.info('Start')
+    threading.Thread(target=InnerCycle.start_loop, name='timeloop').start()
+    InnerCycle.scheduler_run()
     bot_run()
